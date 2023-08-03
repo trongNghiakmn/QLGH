@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modernize Free</title>
+  <link rel="shortcut icon" type="image/png" href="../../assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="../../assets/css/styles.min.css" />
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="./authentication-qldonhang.html" class="text-nowrap logo-img">
+            <img src="../../assets/images/logos/dark-logo.svg" width="180" alt="" />
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Home</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./authentication-qldonhang.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Quản lý đơn hàng</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./authentication-dondangchuyenkho.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Đơn đang chuyển kho</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./authentication-chuyenkho.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Đơn chuyển kho đến</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./authentication-donhangtrave.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Đơn trả về</span>
+              </a>
+            </li>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                <i class="ti ti-bell-ringing"></i>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="mt-4">
+                <div class="row mx-2">
+                  <div class="col-md-4">
+                    <label for=""></label>
+                  </div>
+                  <div class="row">
+
+                    <div class="col-md-4">
+                      <div class="d-flex" style="width: 400px;">
+                        <select id="mak" name="mak" class="form-control" style="width: 120px;"></select>
+                        <a style="background-color: #5d87ff;margin-left: 10px;" onclick="getDataPhieuChuyenKho()"
+                          class="btn btn-info">Reload</a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="d-flex" style="width: 400px;">
+                        <a style="background-color: #5d87ff;margin-left: 10px;" onclick="xacNhanNhanHang()"
+                          class="btn btn-info ml-auto">Xác nhận nhận hàng</a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="d-flex" style="width: 400px;">
+                        <a style="background-color: #f43c3c;margin-left: 10px;" onclick="clickButtonPageTraHang()"
+                          class="btn btn-info ml-auto">Trả hàng</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+          </ul>
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="../../assets/images/profile/user-1.jpg" alt="" width="35" height="35"
+                    class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3" id="ten_nv">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="../index.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--  Header End -->
+      <div class="container-fluid">
+        <div class="pd-20">
+          <h4 class="text-blue h4" style="margin-top: 20px;">Đơn hàng chuyển đến</h4>
+        </div>
+        <div class="pb-20">
+          <form method="get" action="">
+            <table class="data-table table stripe hover nowrap">
+              <thead>
+                <tr>
+                  <th class="table-plus datatable-nosort">Mã phiếu</th>
+                  <th>Ngày Chuyển kho</th>
+                  <th>Kho gửi</th>
+                  <th>Kho đến</th>
+                  <th>Mã đơn</th>
+                  <th>Tên hàng</th>
+                  <th>Địa chỉ</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+            <div class="page-header">
+              <input id="submit" name="submit" type="submit" class="btn btn-info"
+                onclick="return confirm('Ban co chac la muon xoa du lieu')" value=" Delete Selected Row(s)" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/sidebarmenu.js"></script>
+  <script src="../../assets/js/app.min.js"></script>
+  <script src="../../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="../../assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="../../assets/js/dashboard.js"></script>
+  <script src="../../javascript//layout/kho.js"></script>
+  <script src="../../javascript/qlDonHang/hienPhieuChuyenKho.js"></script>
+  <script src="../../javascript/qlDonHang/xacNhanChuyenKho.js"></script>
+  <script src="../../javascript/btnClick.js"></script>
+  <script>
+    document.getElementById("ten_nv").innerHTML = localStorage.getItem("name");
+
+  </script>
+</body>
+
+</html>
